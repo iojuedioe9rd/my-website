@@ -1,0 +1,74 @@
+/* ================================================================= cats_css_library/components/_card.scss =================================================================*/
+@use 'sass:math';
+
+
+
+%card-base {
+    display: block;
+    padding: $base-padding;
+    box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius, 4);
+
+    .card-title {
+        font-size: $font-size-lg;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.card {
+    
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #ddd;
+    box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius, 4);
+
+    .card-title {
+        font-size: $font-size-lg;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+@each $key, $val in $colors {
+    .card-#{$key} {
+        display: block;
+        padding: $base-padding;
+        border: $base-border-thickness solid $val;
+        box-shadow: $base-box-shadow;
+        border-radius: math.div($base-border-radius, 4);
+    
+        .card-title {
+            font-size: $font-size-lg;
+            padding-bottom: $base-padding;
+            font-weight: bold;
+        }
+    
+        .card-body {
+            font-size: $base-font-size;
+    
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/*================================================================= end of cats_css_library/components/_card.scss =================================================================*/

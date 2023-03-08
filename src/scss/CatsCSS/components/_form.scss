@@ -1,0 +1,43 @@
+/* ================================================================= cats_css_library/components/_form.scss =================================================================*/
+@use 'sass:math';
+
+.base-form {
+    display: block;
+    padding: $base-padding;
+    box-shadow: $base-box-shadow ;
+    border-radius: math.div($base-border-radius, 4);
+    margin: auto;
+
+    .form-title {
+        font-size: $font-size-lg;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .form-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.form{
+    @extend .base-form;
+    border: $base-border-thickness  * 2.5 solid darken(#ddd, 5%);
+    
+}
+@each $key, $val in $colors {
+    .form-#{$key} {
+        @extend .base-form;
+        border: $base-border-thickness * 2.5 solid darken($val, 5%) ;
+        
+    }
+
+    
+}
+
+
+
+/* ================================================================= end of cats_css_library/components/_form.scss =================================================================*/
