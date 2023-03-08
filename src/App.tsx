@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import "./scss/App.scss";
-import * as cats from "cats-logger"
+import  l from "cats-logger"
 import Navbar from "./components/navbar"
 import { Link, Outlet, Route, Routes } from "react-router-dom"
 import "./scss/CatsCSS/index.scss"
@@ -14,6 +14,8 @@ const Games = React.lazy(() => import("./components/Games"))
 const Game = React.lazy(() => import("./components/Game"))
 
 function App() {
+ 
+  
   if(window.location.href.includes(".zip"))
   {
     
