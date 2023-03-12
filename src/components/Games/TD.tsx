@@ -4,13 +4,12 @@ import td from "../../img/TD.png"
 
 
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import fortawesome from "../../fortawesome"
+
 import Download, { DownloadType } from '../download';
 import "../../scss/CatsCSS/components/_img.scss"
 
 function previewFiles() {
-  const preview = document.querySelector("#preview");
+  
   const files = (  document.querySelector("input[type=file]") as any).files;
 
   function readAndPreview(file) {

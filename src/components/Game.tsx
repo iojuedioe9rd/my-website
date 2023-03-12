@@ -1,6 +1,7 @@
-import React, {useEffect, useState, Suspense} from 'react'
+import React, {Suspense} from 'react'
 import { useParams } from 'react-router-dom';
-import useFetch, { TopLevel } from '../hoots/useFetch';
+
+
 
 
 const Games = React.lazy(() => import("./Games"))
@@ -9,6 +10,9 @@ const TD = React.lazy(() => import("./Games/TD"))
 const Insane = React.lazy(() => import("./Games/Insane"))
 
 export default  function Game() {
+  
+
+    
   
 
   
@@ -36,7 +40,7 @@ export default  function Game() {
       <h1 className='card-title'>
         404
       </h1>
-      <p className='card-body'>
+      <p className='card-body text-black'>
       Game not found.
       
       <div>

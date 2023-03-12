@@ -1,4 +1,4 @@
-import itch from "../img/itch-io.svg";
+
 import React from 'react'
 
 export default function Home() {

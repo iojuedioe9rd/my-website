@@ -13,5 +13,8 @@ var firebaseConfig : FirebaseConfig = JSON.parse(atob("eyJhcGlLZXkiOiJBSXphU3lDZ
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+var c = {app,
+  analytics,}
 
-export default firebaseConfig
+export default c
+  

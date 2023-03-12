@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
 import fortawesome from "../fortawesome"
 
 export enum DownloadType {

@@ -1,21 +1,15 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Download, {DownloadType} from '../download'
 import insane from '../../img/Insane.png'
-
-import gameWeb from "../../webGL/insane.zip"
-import JSZip from 'jszip'
-import { List } from '../../List' 
-import useCanvas from '../../hoots/useCanvas'
 import Play from '../Play'
+import "../../bg"
 
-import * as THREE from "three"
+//const scene = new THREE.Scene()
 
-const scene = new THREE.Scene()
-
-const cam = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, .1, 1000)
-const renderer = new THREE.WebGLRenderer({canvas: document.querySelector("#bg")})
+//const cam = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, .1, 1000)
+//const renderer = new THREE.WebGLRenderer({canvas: document.querySelector("#bg")})
 
 
 document.addEventListener("resize", ( ) => {
@@ -28,8 +22,14 @@ document.addEventListener("resize", ( ) => {
 
 export default function Insane() {
   
-  const c = useCanvas(window.innerWidth, window.innerHeight, "InsaneCanvas")
   
+  useEffect(() => {
+
+    return () => {
+      
+    
+    }
+  } )
   
   
     
@@ -41,7 +41,7 @@ export default function Insane() {
             
             
             
-          <h2>
+          <h2 className='text-black'>
             tower defence
           </h2>
           
